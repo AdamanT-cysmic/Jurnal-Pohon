@@ -78,7 +78,11 @@
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link link text-black text-primary display-4" href="{{ route('login') }}">Admin</a>
+                <a class="nav-link link text-black text-primary display-4" href="{{ route('login') }}">Login</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link link text-black text-primary display-4" href="{{ route('register') }}">Register</a>
                 </li>
                 <!-- "" -->
                 <!-- /signinadmin -->
