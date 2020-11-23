@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\ManageUser;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/home', function () {
@@ -39,6 +40,16 @@ Route::get('/detailjurnal', function () {
 
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
+    Route::get('/dashboard', function() {
+        return view('dashboard');
+    })->name('dashboard');
+
+
+     Route::get('/manage-user', ManageUser::class)->name('manage-user'); //Tambahkan routing ini
+
+    // Route::get('/managemenuser', Managemenuser::class)->name('managemenuser');
+
+    // Route::get('/upload', 'UploadController@upload')->name('upload');
+    // Route::post('/upload/proses', 'UploadController@proses_upload');
+});
