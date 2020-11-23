@@ -11,7 +11,7 @@
                 <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md my-3" role="alert">
                     <div class="flex">
                         <div>
-                            <p class="text-sm">{{ session('message') }}</p>
+                         <p class="text-sm">{{ session('message') }}</p>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <th class="px-4 py-2">Nama</th>
                         <th class="px-4 py-2">Email</th>
                         <th class="px-4 py-2">Password</th>
-                        
+                        <th class="px-4 py-2">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

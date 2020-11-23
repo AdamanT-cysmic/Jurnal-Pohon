@@ -58,7 +58,7 @@ class ManageUser extends Component
         //MEMBUAT VALIDASI
         $this->validate([
             'name' => 'required|string',
-            'email' => 'required|email|unique:members,email,' . $this->users_id,
+            'email' => 'required|email|unique:users,email,' . $this->users_id,
             'password' => 'required|string',
         ]);
 
